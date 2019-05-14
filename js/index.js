@@ -13,7 +13,10 @@ nav.addEventListener('mouseenter', function() {this.style['background-color'] = 
 nav.addEventListener('mouseleave', function() {this.style['background-color'] = getRGB()});
 
 const p = document.querySelectorAll('p');
-p.forEach(item => item.addEventListener('click', function() {this.style.color = getRGB()}));
+p.forEach(item => item.addEventListener('click', function(event) {
+  this.style.color = getRGB();
+  event.stopPropagation();
+}));
 
 const h2 = document.querySelectorAll('h2');
 h2.forEach(item => item.addEventListener('mousemove', function() {this.style.color = getRGB()} ));
