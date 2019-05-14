@@ -22,6 +22,17 @@ h4.forEach(item => item.addEventListener('dblclick', function() {this.style.colo
 const img = document.querySelectorAll('img');
 img.forEach(item => item.addEventListener('drag', () => {console.log('Image is being dragged.')} ));
 
+// const header = document.querySelector('.main-navigation');
+// header.addEventListener('mouseenter', function() {this.style['background-color'] = getRGB()});
+// header.addEventListener('mouseleave', function() {this.style['background-color'] = getRGB()});
+
+document.body.addEventListener('click', function() {this.style['background-color'] = getRGB()});
+h2.forEach(item => item.addEventListener('click', function(event) {
+  this.style['background-color']= getRGB();
+  event.stopPropagation();
+}));
+
+
 
 // functions
 
