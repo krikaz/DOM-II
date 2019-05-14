@@ -47,13 +47,12 @@ anchorHome.addEventListener('click', function(event) {
 // functions
 
 function getRGB() {
-  const first = getRandomInt();
-  const second = getRandomInt();
-  const third = getRandomInt();
-
-  return `rgb(${first}, ${second}, ${third})`
+  const red = getRandomInt();
+  const green = getRandomInt();
+  const blue = getRandomInt();
+  return `rgb(${red}, ${green}, ${blue})`
 }
 
 function getRandomInt() {
-  return Math.floor(Math.random() * Math.floor(256));
+  return Math.floor(Math.random() * 256);
 }
