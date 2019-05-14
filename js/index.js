@@ -1,4 +1,4 @@
-document.addEventListener('load', console.log('Page has loaded.'));
+window.addEventListener('load', () => {console.log('Page has loaded.')} );
 
 document.body.addEventListener('keydown', function() {this.style.color = getRGB()});
 document.body.addEventListener('keyup', function() {this.style.color = getRGB()});
@@ -27,7 +27,7 @@ for (let i=0; i<h4.length; i++) {
 
 const img = document.querySelectorAll('img');
 for (let i=0; i<img.length; i++) {
-  img[i].addEventListener('contextmenu', console.log('Image is being dragged.'));
+  img[i].addEventListener('drag', () => {console.log('Image is being dragged.')} );
 }
 
 
